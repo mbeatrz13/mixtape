@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>our mixtape</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section id="intro">
+    <img src="img/capa.png" class="intro-cover" alt="Capa">
+    <h2>feliz um ano, meu bem!</h2>
+    <button id="startBtn" class="pink-btn">PODE ACESSAR</button>
+  </section>
+
+  <section id="player" aria-label="Player" style="display:none;">
+
+    <div class="player-left">
+      <img id="cover" src="img/capa.png" class="album-cover" alt="Capa do álbum">
+
+      <div class="controls">
+        <button id="prevBtn" aria-label="Anterior">⏮</button>
+        <button id="playPause" aria-label="Play">▶</button>
+        <button id="nextBtn" aria-label="Próxima">⏭</button>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <div id="progressBar"></div>
+      </div>
+
+      <div id="nowPlaying" class="now-playing"></div>
+    </div>
+
+    <div class="tracklist-box">
+      <h2>tracklist</h2>
+      <ol id="tracklist"></ol>
+    </div>
+
+  </section>
+
+  <!-- MODAL DAS LETRAS -->
+  <div id="lyricsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 id="lyricsTitle"></h3>
+      <pre id="lyricsContent"></pre>
+    </div>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="letras.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
